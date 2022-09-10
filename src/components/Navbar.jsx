@@ -11,6 +11,7 @@ export default function Navbar() {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
+        gap: "1rem",
       }}
     >
       <div
@@ -20,12 +21,21 @@ export default function Navbar() {
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
-          gap: "5px",
         }}
       >
-        <Link to={"/"} style={{textDecoration:"none", color:"white"}}>
+        <Link
+          to={"/"}
+          style={{ 
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "0.3rem",
+            textDecoration: "none",
+            color: "white" }}
+        >
           <RiMusic2Fill />
-          Lyrics Finder
+          <p style={{marginTop:"1rem"}}>Lyrics Finder</p>
         </Link>
       </div>
       <div
@@ -37,7 +47,7 @@ export default function Navbar() {
           justifyContent: "center",
         }}
       >
-        <p>agravatsmit@gmail.com</p>
+        <p style={{marginTop:"1rem"}}>agravatsmit@gmail.com</p>
       </div>
     </nav>
   );
